@@ -31,7 +31,7 @@
 
 		"message/cog": "~1.0",
 
-		"imagine/imagine": "~0.4",
+		"imagine/imagine": "~0.4"
 	},
 	"suggest": {
 		"ext-imagemagick": "Provides faster and more powerful image manipulation libraries"
