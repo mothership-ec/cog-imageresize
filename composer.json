@@ -1,0 +1,39 @@
+{
+	"name": "message/cog-imageresize",
+	"description": "Dynamic URI-based image resize functionality for Cog",
+	"keywords": ["image", "resize", "thumbnail"],
+	"homepage": "http://message.co.uk",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name" : "The Message Development Team",
+			"email": "dev@message.co.uk"
+		}
+	],
+	"support": {
+		"wiki"  : "http://server.local/wiki/projects/cog",
+		"issues": "http://github.com/messagedigital/cog-imageresize/issues"
+	},
+	"autoload": {
+		"psr-4": {
+			"Message\\ImageResize\\"      : "src",
+			"Message\\ImageResize\\Test\\": "tests"
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url" : "http://packages.message.co.uk"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+
+		"message/cog": "~1.0",
+
+		"imagine/imagine": "~0.4"
+	},
+	"suggest": {
+		"ext-imagemagick": "Provides faster and more powerful image manipulation libraries"
+	}
+}
