@@ -14,13 +14,13 @@ class Controller extends \Message\Cog\Controller\Controller
 			$resizer = $this->get('image.resize');
 			$saved = $resizer->resize($url);
 		}
-		catch(Exception\NotFound $e) {
+		catch (Exception\NotFound $e) {
 			throw $this->createNotFoundException($e->getMessage());
 		}
-		catch(Exception\BadParameters $e) {
+		catch (Exception\BadParameters $e) {
 			throw new BadRequestHttpException($e->getMessage());
 		}
-		catch(\Exception $e) {
+		catch (\Exception $e) {
 			throw new HttpException(500, $e->getMessage());
 		}
 

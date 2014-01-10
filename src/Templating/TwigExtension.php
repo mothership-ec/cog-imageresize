@@ -68,6 +68,7 @@ class TwigExtension extends \Twig_Extension
 		$alt = (array_key_exists('alt', $attributes) ? $attributes['alt'] : ($file ? $file->getAltText() : ""));
 
 		$resize = $this->_resize;
+
 		if ($width == $resize::AUTO_KEYWORD or $height == $resize::AUTO_KEYWORD) {
 			$path = 'cog://public/' . $file->getUrl();
 			if (is_file($path)) {

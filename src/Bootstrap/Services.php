@@ -16,19 +16,19 @@ class Services implements ServicesInterface
 	public function registerServices($container)
 	{
 		$container['imagine'] = function($c) {
-			if(extension_loaded('imagick')) {
+			if (extension_loaded('imagick')) {
 				return new \Imagine\Imagick\Imagine();
 			}
 
-			if(extension_loaded('gmagick')) {
+			if (extension_loaded('gmagick')) {
 				return new \Imagine\Gmagick\Imagine();
 			}
 
-			if(extension_loaded('gd')) {
+			if (extension_loaded('gd')) {
 				return new \Imagine\Gd\Imagine();
 			}
 
-			throw new \Exception('No image processing libraries available for Imagine.');
+			throw new \RuntimeException('No image processing libraries available for Imagine.');
 		};
 
 		$container['image.resize'] = $container->share(function($c) {
@@ -39,16 +39,17 @@ class Services implements ServicesInterface
 				Services::SALT,
 				$c['cfg']->app->imageResize->defaultImagePath
 			);
+
 			$resize->setDefaultQuality(90);
 
 			return $resize;
 		});
 
-
 		$container['templating.engine.php'] = $container->share($container->extend('templating.engine.php', function($engine, $c) {
 			$engine->addHelpers(array(
 				new Templating\PhpHelper($c['image.resize'])
 			));
+
 			return $engine;
 		}));
 
@@ -56,6 +57,7 @@ class Services implements ServicesInterface
 			$twig->addExtension(
 				new Templating\TwigExtension($c['image.resize'])
 			);
+
 			return $twig;
 		}));
 	}

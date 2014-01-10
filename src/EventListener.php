@@ -9,7 +9,7 @@ use Message\Cog\Event\EventListener as BaseListener;
 use Message\Cog\Console\Command\Event\Status;
 
 /**
- * Event listener for the ImageResize component.
+ * Event listener for the ImageResize cogule.
  *
  * @author James Moss <james@message.co.uk>
  */

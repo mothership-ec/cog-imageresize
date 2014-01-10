@@ -15,7 +15,7 @@ class ClearCache extends Task
 
 		$fs = $this->get('filesystem.finder');
 
-		foreach($fs->depth('== 0')->in($path->getRealPath()) as $file) {
+		foreach ($fs->depth('== 0')->in($path->getRealPath()) as $file) {
 			$this->get('filesystem')->remove($file->getRealPath());
 		}
 

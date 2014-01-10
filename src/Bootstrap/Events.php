@@ -2,29 +2,15 @@
 
 namespace Message\ImageResize\Bootstrap;
 
-use Message\Cog\Service\ContainerInterface;
-use Message\Cog\Service\ContainerAwareInterface;
 use Message\Cog\Bootstrap\EventsInterface;
 
 /**
- * Cog event listener bootstrap.
- *
- * Registers ImageResize event listeners when the application is loaded.
+ * Bootstrap to register event listeners for the Image Resize cogule.
  *
  * @author James Moss <james@message.co.uk>
  */
-class Events implements EventsInterface, ContainerAwareInterface
+class Events implements EventsInterface
 {
-	protected $_services;
-
-	/**
-	 * {@inheritDoc}
-	 */
-	public function setContainer(ContainerInterface $serviceContainer)
-	{
-		$this->_services = $serviceContainer;
-	}
-
 	/**
 	 * {@inheritDoc}
 	 */
