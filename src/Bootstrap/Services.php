@@ -11,7 +11,6 @@ use Message\Cog\Bootstrap\ServicesInterface;
 class Services implements ServicesInterface
 {
 	const ROUTE_NAME = 'imageresize.cache';
-	const SALT       = 'rCWj^/P8HXMKAru6xX4;(YyP7HTvZutzzEAqoxM9M&Ip+K{{Lot 7g*ZiGR@g>-@';
 
 	public function registerServices($container)
 	{
@@ -36,8 +35,8 @@ class Services implements ServicesInterface
 				$c['imagine'],
 				$c['routing.generator'],
 				Services::ROUTE_NAME,
-				Services::SALT,
-				$c['cfg']->app->imageResize->defaultImagePath
+				$c['cfg']->imageResize->salt,
+				$c['cfg']->imageResize->defaultImagePath
 			);
 
 			$resize->setDefaultQuality(90);
