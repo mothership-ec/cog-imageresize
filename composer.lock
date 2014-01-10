@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "33a26ff979d6ee4fadf7a2b79add96d8",
+    "hash": "3db86e5ef19f7569e9512aec60ca932e",
     "packages": [
         {
             "name": "filp/whoops",
@@ -58,16 +58,16 @@
         },
         {
             "name": "imagine/imagine",
-            "version": "v0.4.1",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "9d644b6940a7b30a4c9de1873b625e6a686533be"
+                "reference": "f64ec666baaa800edcbf237db41121a569230709"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/9d644b6940a7b30a4c9de1873b625e6a686533be",
-                "reference": "9d644b6940a7b30a4c9de1873b625e6a686533be",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/f64ec666baaa800edcbf237db41121a569230709",
+                "reference": "f64ec666baaa800edcbf237db41121a569230709",
                 "shasum": ""
             },
             "require": {
@@ -75,6 +75,11 @@
             },
             "require-dev": {
                 "sami/sami": "dev-master"
+            },
+            "suggest": {
+                "ext-gd": "to use the GD implementation",
+                "ext-gmagick": "to use the Gmagick implementation",
+                "ext-imagick": "to use the Imagick implementation"
             },
             "type": "library",
             "autoload": {
@@ -101,7 +106,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2012-12-13 18:31:18"
+            "time": "2013-07-10 17:25:36"
         },
         {
             "name": "itbz/fpdf",
@@ -338,16 +343,16 @@
         },
         {
             "name": "message/cog",
-            "version": "1.3.3",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:messagedigital/cog.git",
-                "reference": "1.3.3"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/messagedigital/cog/zipball/1.3.3",
-                "reference": "1.3.3",
+                "url": "https://api.github.com/repos/messagedigital/cog/zipball/2.0.0",
+                "reference": "2.0.0",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +363,6 @@
                 "ext-mysqli": "*",
                 "ext-simplexml": "*",
                 "filp/whoops": "1.0.*",
-                "imagine/imagine": "0.4.*",
                 "itbz/fpdf": "1.7.*",
                 "itbz/fpdi": "1.4.*",
                 "knplabs/knp-snappy": "0.1.*",
@@ -368,7 +372,7 @@
                 "monolog/monolog": "1.7.*",
                 "mtdowling/cron-expression": "1.0.*",
                 "natxet/cssmin": "3.0.*",
-                "php": ">=5.3.0",
+                "php": ">=5.4.0",
                 "pimple/pimple": "1.0.1",
                 "swiftmailer/swiftmailer": "5.0.*",
                 "symfony/console": "2.3.*",
@@ -392,7 +396,6 @@
             },
             "suggest": {
                 "ext-apc": "The preferred caching system in Cog",
-                "ext-imagemagick": "Provides faster and more powerful image manipulation libraries",
                 "message/cog-raven": "A Cog module that logs errors, exceptions and messages to Sentry"
             },
             "bin": [
@@ -400,15 +403,10 @@
                 "bin/cog-console"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
-                "psr-0": {
-                    "Message\\Cog": "src",
-                    "Message\\Cog\\Test": "tests"
+                "psr-4": {
+                    "Message\\Cog\\": "src",
+                    "Message\\Cog\\Test\\": "tests"
                 }
             },
             "authors": [
@@ -426,9 +424,9 @@
             "support": {
                 "wiki": "http://server.local/wiki/projects/cog",
                 "issues": "http://github.com/messagedigital/cog/issues",
-                "source": "https://github.com/messagedigital/cog/tree/1.3.3"
+                "source": "https://github.com/messagedigital/cog/tree/2.0.0"
             },
-            "time": "2013-12-19 11:08:21"
+            "time": "2014-01-10 15:22:07"
         },
         {
             "name": "message/wkhtmltopdf",
