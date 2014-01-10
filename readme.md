@@ -60,17 +60,3 @@ This default image can be configured in `config/app.yml`:
 		default-image-path: cogules/MyApp:SetUp/images/default.png
 
 The `generateUrl` method looks up the file and if it doesn't exist it returns the url to the default image. That way only one image for each size is generated and the correct resized image can be generated as soon as a file is uploaded to the server.
-
-## Todo
-
-- Move all code from Cog (including tests if there are any)
-- Remove the code from Cog
-- Check for any translations that need moving
-- Move config from app.yml to this cogule
-- Fix any broken unit tests
-- Move readme here
-- Check for references to old namespace or code
-- Integrate in MS demo
-- Integrate in UW
-- Change requirement on Cog to the version that removes the ImageResize functionality and supports PSR-4! (chicken and eggy!)
-- Commit composer.lock
