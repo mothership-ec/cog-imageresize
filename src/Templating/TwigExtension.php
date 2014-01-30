@@ -70,7 +70,10 @@ class TwigExtension extends \Twig_Extension
 		$resize = $this->_resize;
 
 		if ($width == $resize::AUTO_KEYWORD or $height == $resize::AUTO_KEYWORD) {
-			$path = 'cog://public/' . $file->getUrl();
+			$path = ($file instanceof ResizableInterface)
+				? 'cog://public/' . $file->getUrl()
+				: null;
+
 			if (is_file($path)) {
 				list($sw, $sh) = getimagesize($path);
 
@@ -83,8 +86,8 @@ class TwigExtension extends \Twig_Extension
 				}
 			}
 			else {
-				if ($width == $resize::AUTO_KEYWORD)  $width = 0;
-				if ($height == $resize::AUTO_KEYWORD) $height = 0;
+				if ($width == $resize::AUTO_KEYWORD)  $width = false;
+				if ($height == $resize::AUTO_KEYWORD) $height = false;
 			}
 		}
 
