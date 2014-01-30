@@ -86,8 +86,8 @@ class TwigExtension extends \Twig_Extension
 				}
 			}
 			else {
-				if ($width == $resize::AUTO_KEYWORD)  $width = 0;
-				if ($height == $resize::AUTO_KEYWORD) $height = 0;
+				if ($width == $resize::AUTO_KEYWORD)  $width = false;
+				if ($height == $resize::AUTO_KEYWORD) $height = false;
 			}
 		}
 
