@@ -44,7 +44,7 @@ class Services implements ServicesInterface
 			return $resize;
 		};
 
-		$container['templating.twig.environment'] = $container->extend('templating.twig.environment', function($twig, $c) {
+		$container->extend('templating.twig.environment', function($twig, $c) {
 			$twig->addExtension(
 				new Templating\TwigExtension($c['image.resize'])
 			);
