@@ -30,7 +30,7 @@ class Services implements ServicesInterface
 			throw new \RuntimeException('No image processing libraries available for Imagine.');
 		};
 
-		$container['image.resize'] = $container->share(function($c) {
+		$container['image.resize'] = function($c) {
 			$resize = new \Message\ImageResize\Resize(
 				$c['imagine'],
 				$c['routing.generator'],
@@ -42,14 +42,14 @@ class Services implements ServicesInterface
 			$resize->setDefaultQuality(90);
 
 			return $resize;
-		});
+		};
 
-		$container['templating.twig.environment'] = $container->share($container->extend('templating.twig.environment', function($twig, $c) {
+		$container->extend('templating.twig.environment', function($twig, $c) {
 			$twig->addExtension(
 				new Templating\TwigExtension($c['image.resize'])
 			);
 
 			return $twig;
-		}));
+		});
 	}
 }
