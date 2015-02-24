@@ -3,7 +3,7 @@
 	"description": "Dynamic URI-based image resize functionality for Cog",
 	"keywords": ["image", "resize", "thumbnail"],
 	"homepage": "http://mothership.ec",
-	"license": "proprietary",
+	"license": "GPL-3.0+",
 	"authors": [
 		{
 			"name" : "The Mothership Development Team",
