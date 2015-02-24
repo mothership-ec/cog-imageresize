@@ -1,18 +1,18 @@
 {
-	"name": "message/cog-imageresize",
+	"name": "mothership-ec/cog-imageresize",
 	"description": "Dynamic URI-based image resize functionality for Cog",
 	"keywords": ["image", "resize", "thumbnail"],
-	"homepage": "http://message.co.uk",
+	"homepage": "http://mothership.ec",
 	"license": "proprietary",
 	"authors": [
 		{
-			"name" : "The Message Development Team",
-			"email": "dev@message.co.uk"
+			"name" : "The Mothership Development Team",
+			"email": "dev@mothership.ec"
 		}
 	],
 	"support": {
-		"wiki"  : "http://server.local/wiki/projects/cog",
-		"issues": "http://github.com/messagedigital/cog-imageresize/issues"
+		"wiki"  : "http://wiki.mothership.ec/Cog_Image_Resize",
+		"issues": "http://github.com/mothership-ec/cog-imageresize/issues"
 	},
 	"autoload": {
 		"psr-4": {
@@ -20,16 +20,10 @@
 			"Message\\ImageResize\\Test\\": "tests"
 		}
 	},
-	"repositories": [
-		{
-			"type": "composer",
-			"url" : "http://packages.message.co.uk"
-		}
-	],
 	"require": {
 		"php": ">=5.4.0",
 
-		"message/cog": "~3.0",
+		"mothership-ec/cog": "~4.0",
 
 		"imagine/imagine": "~0.4"
 	},
